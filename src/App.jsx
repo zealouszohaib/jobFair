@@ -5,11 +5,7 @@ import Home from "./Home";
 import Sponsor from "./Sponsor";
 import Company from "./company";
 import Footer from "./assets/Footer";
-import StudentPage from "./Student";
-import Register from "./Register";
-import CompanyRegistration from "./CompanyRegisteration";
 import Highlights from "./Highlights";
-
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -21,8 +17,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/companies" element={<Company />} />
         <Route path="/sponsors" element={<Sponsor />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/register-company" element={<CompanyRegistration  />} />
         <Route path="/highlights" element={<Highlights/>} />
         
         <Route path="*" element={<div className="text-center mt-10 text-xl text-red-600">Page not found</div>} />
