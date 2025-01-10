@@ -16,9 +16,7 @@ function Details() {
           <p className='mt-6 leading-relaxed text-lg md:text-xl'>
             “We're excited to invite you to participate in the FCIT Annual Career Fair 2025. With an expected attendance of 2500+ students and alumni from diverse academic backgrounds, this unparalleled event can give you the chance to make lasting connections and showcase your opportunities to top-tier talent.”
           </p>
-          <button className='custom-btn m-4 py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300'>
-            Reserve Your Spot
-          </button>
+        
         </div>
         <div className="image-section hidden sm:block md:w-1/2 mt-6 md:mt-0">
           <img src={bannerImage} alt="Career Fair" className="w-full h-auto rounded-lg shadow-lg" />
