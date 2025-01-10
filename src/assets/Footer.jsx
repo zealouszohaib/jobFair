@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
 
                     <p className="font-bold text-gray-500 text-center bg-gradient-to-r from-indigo-500 to-indigo-800 bg-clip-text text-transparent italic">
-                        &copy; 2025. Job Hunt. All rights reserved.
+                        &copy; 2025. Job Fair. All rights reserved.
                     </p>
                 </div>
             </footer>
