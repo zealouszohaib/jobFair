@@ -21,20 +21,19 @@ const AnimatedBadgeStyles = () => (
   </style>
 );
 
-
 const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="max-w-sm mx-auto bg-white rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 
-        shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_40px_rgba(66,99,235,0.3)]"
+        shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_40px_rgba(66,99,235,0.3)] flex flex-col justify-between"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Gradient Border Effect */}
-      <div className="p-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-        <div className="bg-white">
+      <div className="p-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full flex flex-col">
+        <div className="bg-white h-full flex flex-col justify-between">
           {/* Card Header */}
           <div className="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 p-8 text-white relative overflow-hidden">
             {/* Animated Background Pattern */}
@@ -62,8 +61,11 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
             {badge && (
               <div className="absolute top-4 right-4">
                 <span className="relative inline-flex">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative bg-red-500 text-white text-sm px-4 py-1.5 rounded-full font-semibold shadow-lg">
+                  {/* Animated pulsating background */}
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-red-500 opacity-75 animate-ping"></span>
+
+                  {/* Main badge */}
+                  <span className="relative bg-gradient-to-r from-red-600 via-pink-500 to-red-300 text-white text-sm px-4 py-1.5 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-transform duration-200 ease-in-out">
                     {badge}
                   </span>
                 </span>
@@ -71,21 +73,25 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
             )}
 
             {discount && (
-              <div className="absolute top-4 left-1 transform -rotate-12">
-                <span className="bg-green-500   text-white text-sm px-3 py-1 rounded-full font-semibold shadow-md 
-                  animate-[bounce_2s_infinite]">
-                  {discount}
-                </span>
-              </div>
+             <div className="absolute top-4 left-1 transform -rotate-12">
+             <span
+               className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white text-sm px-3 py-1 rounded-full font-semibold shadow-lg 
+               animate-pulse hover:scale-110 transition-all duration-300 ease-in-out"
+             >
+               {discount}
+             </span>
+           </div>
+           
+            
             )}
           </div>
 
           {/* Card Body */}
-          <div className="p-8">
+          <div className="p-8 flex flex-col justify-between flex-grow">
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex items-start space-x-3 transform transition-transform duration-300 hover:translate-x-2"
                 >
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
@@ -96,13 +102,17 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
               ))}
             </div>
 
-           
+            {/* Bottom Line Section */}
+            {/* <div className="mt-8 border-t pt-4 text-gray-500 text-sm text-center">
+              Additional information or disclaimers can go here.
+            </div> */}
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 const SponsorshipPackages = () => {
   const packages = [
     {
@@ -135,7 +145,7 @@ const SponsorshipPackages = () => {
         "Exclusive 8ft x 20ft banner space.",
         "Publicity on FCIT + PU website, social media.",
       ],
-      discount: "Alumni Discount 25% on All Packages",
+      discount: "Alumni Discount 33% on All Packages",
       badge: "Gold",
     },
     {
@@ -156,24 +166,24 @@ const SponsorshipPackages = () => {
 
   return (
     <div className=" dark:bg-gray-800">
-    <div className="container  mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8 text-center">
-        Sponsorship Packages
-      </h1>
+      <div className="container  mx-auto p-6">
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          Sponsorship Packages
+        </h1>
 
-      <div className="grid  md:grid-cols-3 gap-8">
-        {packages.map((pkg, index) => (
-          <SponsorshipCard
-            key={index}
-            title={pkg.title}
-            price={pkg.price}
-            benefits={pkg.benefits}
-            discount={pkg.discount}
-            badge={pkg.badge}
-          />
-        ))}
+        <div className="grid  md:grid-cols-3 gap-8">
+          {packages.map((pkg, index) => (
+            <SponsorshipCard
+              key={index}
+              title={pkg.title}
+              price={pkg.price}
+              benefits={pkg.benefits}
+              discount={pkg.discount}
+              badge={pkg.badge}
+            />
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
