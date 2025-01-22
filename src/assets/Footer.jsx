@@ -1,4 +1,5 @@
 import React from "react";
+import qr from "../assets/qr.png";
 
 const Footer = () => {
   return (
@@ -46,7 +47,7 @@ const Footer = () => {
               <p className="text-xl font-bold">Scan Here</p>
               <div className="mt-4">
                 <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABlBMVEX///8AAABVwtN+AAADDklEQVR4nO3UUW6FQAxD0bL/Tfe71DYOSH2huvniwUzik0r9+qIoiqIoivpXdVyXOndqcDqiZrQ/HydFiBDhUmHuamMV77KrWMc86d17CFPotkEOhBCh/m9pI6jKkGInRatRUoQIEb5X2JbtZ2eoafYcQoQI/6FQfVUfWlLBHGVBiBDhO4Q3/Qqcoxbn8o2ZAyFChEuEuXKiv30qkiJEiHCfsC3bS4U53Sg655GPkreF8HdUhL8b2JGP0zf1XmFOforfviuS38xXJEWIEOE+oT1jo1qSTVScs52Lfs3GECJE+FGh7W+/5oY2Vm7Vfm0XjRAhwlVCmy0faVekztmAN0l5LkKECBcIrauYmcO0T3ljow8IESLcLLQudTg3HOHaBMUWfSqECBEuEbbjjp9l36kPeW1FoNGeECJEuE9o++d1tHuyantYbafRIESI8BXC0zvV2r4rGhT+bM1JESJEuFmoIvgr1/3Vh+O67LlRKoQIEe4TWrDqn8/la4U1n7NJESJE+CJhO0m1tj9V0yehVT6ECBGuF+bQWWPV+V3O285tcAgRIlwiVGDbRoXOh28+2ZHqhjqCECHCVUJ75nCVj9hYdrjCFcmtGiFChPuEuf98emEtQudrxe4QIkS4WZhxGWytRZciebFPXwjTJIQIL94VNy6ECpenK2HGqbXZPdlAo2UhRIhwlVANsT9zQ5uyaGDBMwNChAgXC+eJVI7MtK4R2I5EiBDhZmF7uQiTD1t6xlmwJyFEiHCdMCeaT8/92vh2WfkvgBAhwqVC2zCnHH0oBhULLNojRIhwqXCkHt3IOUYuO9L+RIgQ4Sqhin+4KiKoG9mQQ+csee8IESLcImwrJxqFUR/y4WIuQoQINwtzttPlnDe/a6cV1hwNIUKES4Xyy3XX3KXdU7GOPC0TECJEuEqoJhX+fK14GvnnIREiRPg2YQEpZhR3iyXYxSBEiPC9QpsjB1TnRqtscQgRInyHsPCr6XkJxbRiT8Xw2UyECBF+QJhLnbMBZ9OvSc9vIESI8PNCiqIoiqKo19Y3SmVQqzStPc4AAAAASUVORK5CYII="
+                  src={qr}
                   alt="QR Code for 14th FCIT Career Fair 2025"
                   className="w-40 h-40"
                 />

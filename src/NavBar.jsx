@@ -68,6 +68,14 @@ function NavBar() {
               Highlights
             </Link>
             <Link
+              to="/Student"
+              className={`text-gray-400 hover:text-white transition duration-300 ${
+                isActive("/Student") ? "text-blue-500 font-bold" : ""
+              }`}
+            >
+              Student
+            </Link>
+            <Link
               to="/companies"
               className={`text-gray-400 hover:text-white transition duration-300 ${
                 isActive("/companies") ? "text-blue-500 font-bold" : ""
@@ -101,6 +109,18 @@ function NavBar() {
                 }`}
               >
                 Highlights
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Student"
+                className={`block px-3 py-2 rounded-md transition duration-300 ${
+                  isActive("/Student")
+                    ? "bg-blue-700 text-white font-bold"
+                    : "text-gray-400 hover:text-white hover:bg-gray-700"
+                }`}
+              >
+                Student
               </Link>
             </li>
             <li>

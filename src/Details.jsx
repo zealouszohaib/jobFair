@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Users } from 'lucide-react';
+import { Calendar, MapPin, Users,Phone,Mail } from 'lucide-react';
 
 const Details = () => {
   return (
@@ -41,6 +41,29 @@ const Details = () => {
                 </div>
               </div>
             </div>
+
+            <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
+              <div className="flex items-center gap-3">
+                <Phone className="h-6 w-6 text-indigo-400" />
+                <div className="text-gray-100">
+                  <p className="font-semibold">Mr. Faheem</p>
+                  <p className="text-lg text-indigo-300">0301-4786754</p>
+                </div>
+              </div>
+            </div>
+            
+
+            <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
+              <div className="flex items-center gap-3">
+                <Mail className="h-6 w-6 text-indigo-400" />
+                <div className="text-gray-100">
+                  <p className="font-semibold">Placement Office</p>
+                  <p className="text-lg text-indigo-300">placementoffice@pucit.edu.pk</p>
+                </div>
+              </div>
+            </div>
+            
+
           </div>
         </div>
       </div>

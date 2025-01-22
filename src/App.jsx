@@ -7,6 +7,8 @@ import Sponsor from "./Sponsor";
 import Company from "./Company";
 import Footer from "./assets/Footer";
 import Highlights from "./Highlights";
+import Student from "./Student";
+
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -17,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/date" element={<Date />} />
+        <Route path="/student" element={<Student />} />
         <Route path="/companies" element={<Company />} />
         <Route path="/sponsors" element={<Sponsor />} />
         <Route path="/highlights" element={<Highlights/>} />

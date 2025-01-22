@@ -30,6 +30,24 @@ const CareerFairHighlights = () => {
     },
   ];
 
+  const images = [
+    {
+      src: photo,
+      alt: "Career Fair Highlight",
+      text: "Celebrating Connections at Career Fair 2024",
+    },
+    {
+      src: company,
+      alt: "Company Highlight",
+      text: "Building Future Opportunities with Leading Companies",
+    },
+    // {
+    //   src: company,
+    //   alt: "Company Highlight",
+    //   text: "Building Future Opportunities with Leading Companies",
+    // },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-800 p-8">
       <div className="max-w-4xl mx-auto">
@@ -39,39 +57,27 @@ const CareerFairHighlights = () => {
 
         <div className="bg-gray-800 py-12">
           <div className="container mx-auto px-4">
-            {/* Image Section - Side by Side on Larger Screens */}
+            {/* Image Section - Loop through images */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* First Photo */}
-              <div className="group relative rounded-lg overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105">
-                <img
-                  src={photo}
-                  alt="Career Fair Highlight"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-                  <div className="p-4">
-                    <p className="text-white text-lg font-semibold">
-                      Celebrating Connections at Career Fair 2024
-                    </p>
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="group relative rounded-lg overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                    <div className="p-4">
+                      <p className="text-white text-lg font-semibold">
+                        {image.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Second Photo */}
-              <div className="group relative rounded-lg overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105">
-                <img
-                  src={company}
-                  alt="Company Highlight"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-                  <div className="p-4">
-                    <p className="text-white text-lg font-semibold">
-                      Building Future Opportunities with Leading Companies
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -96,6 +102,3 @@ const CareerFairHighlights = () => {
 };
 
 export default CareerFairHighlights;
-
-
-

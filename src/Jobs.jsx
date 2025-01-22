@@ -62,30 +62,130 @@ function Jobs() {
               <h4 className="text-2xl font-bold text-blue-600">
                 <CountUp end={100} duration={2} />
               </h4>
-              <a href="https://pucit.edu.pk/department-of-data-science/" className="block">
+              <a
+                href="https://pucit.edu.pk/department-of-data-science/"
+                className="block"
+              >
                 <p className="text-gray-700 font-medium">BSDS Students</p>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Faculty Summary Section */}
         <div>
-          <h3 className="text-3xl font-semibold text-orange-500 mb-6">
-            Faculty Summary
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+         
+
+          {/* Faculty Summary Section */}
+          <div>
+            <h3 className="text-3xl font-semibold text-orange-500 mb-6">
+              Faculty Summary
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              {/* CS Faculty */}
+              <div className="bg-white shadow-lg rounded-lg p-6">
+                <h4 className="text-2xl font-bold text-blue-600 mb-4">Computer Science</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>
+                    <span className="font-bold">Professor:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Associate Professors:</span>{" "}
+                    <CountUp end={2} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Assistant Professors:</span>{" "}
+                    <CountUp end={15} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Lecturers:</span>{" "}
+                    <CountUp end={2} duration={2} />
+                  </li>
+                </ul>
+              </div>
+              {/* SE Faculty */}
+              <div className="bg-white shadow-lg rounded-lg p-6">
+                <h4 className="text-2xl font-bold text-blue-600 mb-4">Software Engineering</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>
+                    <span className="font-bold">Professor:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Associate Professors:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Assistant Professors:</span>{" "}
+                    <CountUp end={13} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Lecturers:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                </ul>
+              </div>
+              {/* IT Faculty */}
+              <div className="bg-white shadow-lg rounded-lg p-6">
+                <h4 className="text-2xl font-bold text-blue-600 mb-4">Information technology</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>
+                    <span className="font-bold">Professor:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Associate Professors:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Assistant Professors:</span>{" "}
+                    <CountUp end={10} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Lecturers:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                </ul>
+              </div>
+              {/* DS Faculty */}
+              <div className="bg-white shadow-lg rounded-lg p-6">
+                <h4 className="text-2xl font-bold text-blue-600 mb-4">Data Science</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>
+                    <span className="font-bold">Professor:</span>{" "}
+                    <CountUp end={1} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Associate Professors:</span>{" "}
+                    <CountUp end={5} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Assistant Professors:</span>{" "}
+                    <CountUp end={7} duration={2} />
+                  </li>
+                  <li>
+                    <span className="font-bold">Lecturers:</span>{" "}
+                    <CountUp end={0} duration={2} />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 mt-6 md:grid-cols-2 gap-8">
             {/* Area of Research */}
             <div>
               <h4 className="text-xl font-semibold text-gray-700 mb-3">
                 Area of Research
               </h4>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>NLP</li>
-                <li>Computer Vision</li>
-                <li>Cloud Computing</li>
-                <li>IoT</li>
-                <li>AI</li>
+                <ul>
+                  <li>Natural Language Processing </li>
+                  <li>Computer Vision</li>
+                  <li>Cloud Computing</li>
+                  <li>Internet of Things</li>
+                  <li>Artificial Intelligence (AI)</li>
+                </ul>
               </ul>
             </div>
             {/* Distinctions */}
