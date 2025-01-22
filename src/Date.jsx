@@ -1,34 +1,85 @@
-import * as React from "react";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import dayjs from "dayjs";
+import React, { useState } from "react";
 
-export default function EventDateCalendar() {
-  // Set default event date
-  const eventDate = dayjs("2025-02-22");
+const ImageSlider = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
-    <div className="md:w-2/5 bg-gray-700 p-8 md:p-12 flex justify-center items-center">
-    <div>
-      <h2 className="text-2xl font-bold text-white text-center mb-4">
-        Event Date
-      </h2>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DateCalendar
-          value={eventDate}
-          readOnly // Makes the calendar view-only
-          className="rounded-lg shadow-lg bg-gray-800 text-white"
-        />
-      </LocalizationProvider>
-      <p className="text-center mt-4 text-gray-300">
-        Mark your calendar for{" "}
-        <span className="font-semibold text-white">
-          22nd February 2025
-        </span>
-        .
-      </p>
+    <div className="relative max-w-4xl mx-auto overflow-hidden">
+      {/* Slider Container */}
+      <div
+        className="flex transition-transform duration-500"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
+      >
+        {images.map((image, index) => (
+          <div key={index} className="w-full flex-shrink-0">
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-64 object-cover rounded-lg"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Buttons */}
+      <button
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+        onClick={handlePrev}
+      >
+        &#8249;
+      </button>
+      <button
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+        onClick={handleNext}
+      >
+        &#8250;
+      </button>
+
+      {/* Indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full ${
+              currentIndex === index
+                ? "bg-indigo-500"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
+          ></button>
+        ))}
+      </div>
     </div>
-  </div>
   );
-}
+};
+
+const Date = () => {
+  const images = [
+    "https://picsum.photos/200?text=Slide+1",
+    "https://via.placeholder.com/800x400?text=Slide+2",
+    "https://via.placeholder.com/800x400?text=Slide+3",
+    "https://via.placeholder.com/800x400?text=Slide+4",
+  ];
+
+  return (
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+      <ImageSlider images={images} />
+    </div>
+  );
+};
+
+export default Date;
