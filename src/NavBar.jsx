@@ -22,11 +22,11 @@ function NavBar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-3">
-            <img
+            {/* <img
               src="https://flowbite.com/docs/images/logo.svg"
               className="h-8"
               alt="Logo"
-            />
+            /> */}
             <span className="text-2xl font-semibold">FCIT</span>
           </Link>
 
