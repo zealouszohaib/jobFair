@@ -86,7 +86,7 @@ function NavBar() {
                 isActive("/companies") ? "text-blue-500 font-bold" : ""
               }`}
             >
-              Company
+              Companies
             </Link>
             <Link
               to="/sponsors"
@@ -94,7 +94,7 @@ function NavBar() {
                 isActive("/sponsors") ? "text-blue-500 font-bold" : ""
               }`}
             >
-              Sponsor
+              Sponsors
             </Link>
           </div>
         </div>
