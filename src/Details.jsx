@@ -1,5 +1,5 @@
-import React from 'react';
-import { Calendar, MapPin, Users,Phone,Mail } from 'lucide-react';
+import React from "react";
+import { Calendar, MapPin, Users, Phone, Mail } from "lucide-react";
 
 const Details = () => {
   return (
@@ -12,13 +12,15 @@ const Details = () => {
               <span className="font-semibold">February 20, 2025</span>
             </div>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-            FCIT Annual Career Fair 2025
+            FCIT 14th Annual Career Fair 2025
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            We're excited to invite you to participate in the FCIT Annual Career Fair 2025. Connect with top-tier talent and shape the future of technology together.
+            Empowering Futures: Connect, Inspire, and Transform at Career Fair
+            2025! Build connections and explore opportunities to shape your
+            future.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -31,7 +33,7 @@ const Details = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
               <div className="flex items-center gap-3">
                 <MapPin className="h-6 w-6 text-indigo-400" />
@@ -51,19 +53,18 @@ const Details = () => {
                 </div>
               </div>
             </div>
-            
 
             <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
               <div className="flex items-center gap-3">
                 <Mail className="h-6 w-6 text-indigo-400" />
                 <div className="text-gray-100">
                   <p className="font-semibold">Placement Office</p>
-                  <p className="text-lg text-indigo-300">placementoffice@pucit.edu.pk</p>
+                  <p className="text-lg text-indigo-300">
+                    placementoffice@pucit.edu.pk
+                  </p>
                 </div>
               </div>
             </div>
-            
-
           </div>
         </div>
       </div>
