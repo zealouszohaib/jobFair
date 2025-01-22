@@ -123,7 +123,7 @@ const CompanyPackages = () => {
   ];
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-800 min-h-screen">
+    <div className="bg-gray-50 bg-gray-800 min-h-screen">
       <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-8 text-center">
           Company Stall Packages
