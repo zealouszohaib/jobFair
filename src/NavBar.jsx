@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
@@ -10,6 +10,11 @@ function NavBar() {
   };
 
   const isActive = (path) => location.pathname === path;
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
