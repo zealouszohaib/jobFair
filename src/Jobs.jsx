@@ -48,47 +48,35 @@ function Jobs() {
           <h3 className="text-4xl font-semibold text-orange-400 text-center">
             Faculty Summary
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Computer Science",
-                data: [1, 2, 15, 2],
-              },
-              {
-                title: "Software Engineering",
-                data: [1, 1, 13, 1],
-              },
-              {
-                title: "Information Technology",
-                data: [1, 1, 10, 1],
-              },
-              {
-                title: "Data Science",
-                data: [1, 5, 7, 0],
-              },
-            ].map((faculty, index) => (
-              <div
-                key={index}
-                className="p-8 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <h4 className="text-2xl font-bold text-blue-400 mb-4">
-                  {faculty.title}
-                </h4>
-                <ul className="text-gray-300 space-y-2">
-                  {[
-                    "Professor",
-                    "Associate Professors",
-                    "Assistant Professors",
-                    "Lecturers",
-                  ].map((role, idx) => (
-                    <li key={idx}>
-                      <span className="font-bold">{role}:</span>{" "}
-                      <CountUp end={faculty.data[idx]} duration={2} />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-left text-gray-300">
+              <thead className="bg-gray-800">
+                <tr>
+                  <th className="px-6 py-4 text-sm font-bold text-blue-400">Designation</th>
+                  <th className="px-6 py-4 text-sm font-bold text-blue-400">Computer Science</th>
+                  <th className="px-6 py-4 text-sm font-bold text-blue-400">Software Engineering</th>
+                  <th className="px-6 py-4 text-sm font-bold text-blue-400">Information Technology</th>
+                  <th className="px-6 py-4 text-sm font-bold text-blue-400">Data Science</th>
+                </tr>
+              </thead>
+              <tbody className="bg-gray-800 divide-y divide-gray-700">
+                {[
+                  { designation: "Professor", data: [1, 1, 1, 1] },
+                  { designation: "Associate Professors", data: [2, 1, 1, 5] },
+                  { designation: "Assistant Professors", data: [15, 13, 10, 7] },
+                  { designation: "Lecturers", data: [2, 1, 1, 0] },
+                ].map((row, idx) => (
+                  <tr key={idx}>
+                    <td className="px-6 py-4 font-medium text-gray-300">{row.designation}</td>
+                    {row.data.map((count, colIdx) => (
+                      <td key={colIdx} className="px-6 py-4">
+                        <CountUp end={count} duration={2} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
 
