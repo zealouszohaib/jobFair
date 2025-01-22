@@ -1,30 +1,51 @@
 import React from 'react';
-import bannerImage from './assets/boy.png';
+import { Calendar, MapPin, Users } from 'lucide-react';
 
-function Details() {
+const Details = () => {
   return (
-    <div className=' dark:bg-gray-900'>
-    <div className=" container  mx-auto px-6">
-      <div className='md:flex items-center mb-12'>
-        <div className="header-details md:w-3/5 tracking-wider">
-          <h1 className='text-5xl md:text-7xl font-bold'>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <div className="inline-block">
+            <div className="flex items-center gap-2 bg-indigo-900/50 text-indigo-300 px-4 py-2 rounded-full border border-indigo-700/50 backdrop-blur-sm">
+              <Calendar size={20} />
+              <span className="font-semibold">February 20, 2025</span>
+            </div>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
             FCIT Annual Career Fair 2025
           </h1>
-          <p className='mt-2 text-lg md:text-xl'>
-            <strong>Saturday, 5 Feb 2025</strong>
+          
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+            We're excited to invite you to participate in the FCIT Annual Career Fair 2025. Connect with top-tier talent and shape the future of technology together.
           </p>
-          <p className='mt-6 leading-relaxed text-lg md:text-xl'>
-            “We're excited to invite you to participate in the FCIT Annual Career Fair 2025. With an expected attendance of 2500+ students and alumni from diverse academic backgrounds, this unparalleled event can give you the chance to make lasting connections and showcase your opportunities to top-tier talent.”
-          </p>
-        
-        </div>
-        <div className="image-section hidden sm:block md:w-1/2 mt-6 md:mt-0">
-          <img src={bannerImage} alt="Career Fair" className="w-full h-auto rounded-lg shadow-lg" />
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
+              <div className="flex items-center gap-3">
+                <Users className="h-6 w-6 text-indigo-400" />
+                <div className="text-gray-100">
+                  <p className="font-semibold">Expected Attendance</p>
+                  <p className="text-2xl font-bold text-indigo-300">2,500+</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
+              <div className="flex items-center gap-3">
+                <MapPin className="h-6 w-6 text-indigo-400" />
+                <div className="text-gray-100">
+                  <p className="font-semibold">Location</p>
+                  <p className="text-lg text-indigo-300">FCIT New Campus</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
   );
-}
+};
 
 export default Details;

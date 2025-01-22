@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import Date from "./Date";
 import Sponsor from "./Sponsor";
 import Company from "./Company";
 import Footer from "./assets/Footer";
@@ -15,6 +16,7 @@ function App() {
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/date" element={<Date />} />
         <Route path="/companies" element={<Company />} />
         <Route path="/sponsors" element={<Sponsor />} />
         <Route path="/highlights" element={<Highlights/>} />

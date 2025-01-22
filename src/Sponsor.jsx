@@ -165,7 +165,7 @@ const SponsorshipPackages = () => {
   ];
 
   return (
-    <div className=" dark:bg-gray-800">
+    <div className=" bg-gray-800">
       <div className="container  mx-auto p-6">
         <h1 className="text-4xl font-bold mb-8 text-center">
           Sponsorship Packages
