@@ -44,12 +44,12 @@ function Jobs() {
         </div>
 
         {/* Faculty Summary Section */}
-        <div className="space-y-8">
+        <div className="space-y-8 ">
           <h3 className="text-4xl font-semibold text-orange-400 text-center">
             Faculty Summary
           </h3>
-          <div className="overflow-x-auto">
-            <table className="min-w-full text-left text-gray-300">
+          <div className="overflow-x-auto rounded-md">
+            <table className="min-w-full text-left text-gray-300 ">
               <thead className="bg-gray-800">
                 <tr>
                   <th className="px-6 py-4 text-sm font-bold text-blue-400">Designation</th>
