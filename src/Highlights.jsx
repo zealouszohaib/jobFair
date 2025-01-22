@@ -49,13 +49,13 @@ const CareerFairHighlights = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-800 p-8">
+    <div className="min-h-screen bg-gray-900 p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-300">
           CAREER FAIR 2024 HIGHLIGHTS
         </h1>
 
-        <div className="bg-gray-800 py-12">
+        <div className="bg-gray-900 py-12">
           <div className="container mx-auto px-4">
             {/* Image Section - Loop through images */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
