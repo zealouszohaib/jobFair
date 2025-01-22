@@ -33,6 +33,8 @@ const Student = () => {
             <span className="font-semibold text-indigo-300">Follow up:</span> Send thank-you notes or emails post-event.
           </li>
         </ul>
+
+        <a  href="#" className="py-6 text-blue-100">register here</a>
         <div className="text-center">
           <a
             href="/path-to-dummy-guide.pdf" // Replace with the actual path to the guide
