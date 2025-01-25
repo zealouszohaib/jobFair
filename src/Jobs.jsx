@@ -42,7 +42,7 @@ function Jobs() {
                 className="p-6 bg-gray-800 shadow-lg rounded-lg hover:scale-105 transition-transform duration-300"
               >
                 <h4 className="text-3xl font-bold text-blue-400 mb-2">
-                  <CountUp end={100} duration={2} />
+                  <CountUp end={100} duration={2} />+
                 </h4>
                 <a
                   href={`https://pucit.edu.pk/${dept.link}`}
@@ -56,15 +56,15 @@ function Jobs() {
         </div>
 
         {/* Faculty Summary Section */}
-        <div className="space-y-8 ">
+        <div className="space-y-6">
           <h3 className="text-4xl font-semibold text-orange-400 text-center">
             Faculty Summary
           </h3>
-          <div className="overflow-x-auto rounded-md">
-            <table className="min-w-full text-left text-gray-300 ">
+          <div className="overflow-x-auto">
+            <table className="text-left text-gray-300 mx-auto w-[900px] rounded-xl overflow-hidden px-200">
               <thead className="bg-gray-800">
                 <tr>
-                  <th className="px-6 py-4 text-sm font-bold text-blue-400">
+                  <th className="px-6 py-6 text-lg font-bold text-blue-400">
                     Designation
                   </th>
                   {[
@@ -85,7 +85,7 @@ function Jobs() {
                       link: "department-of-data-science/",
                     },
                   ].map((dept, index) => (
-                    <th key={index} className="px-6 py-4 text-sm font-bold">
+                    <th key={index} className="px-2 py-6 text-md font-bold">
                       <a
                         href={`https://pucit.edu.pk/${dept.link}`}
                         className="text-blue-400 hover:underline"
@@ -98,7 +98,7 @@ function Jobs() {
               </thead>
               <tbody className="bg-gray-800 divide-y divide-gray-700">
                 {[
-                  { designation: "Professor", data: [1, 1, 1, 1] },
+                  { designation: "Professors", data: [1, 1, 1, 2] },
                   { designation: "Associate Professors", data: [2, 1, 1, 5] },
                   {
                     designation: "Assistant Professors",
@@ -107,11 +107,11 @@ function Jobs() {
                   { designation: "Lecturers", data: [2, 1, 1, 0] },
                 ].map((row, idx) => (
                   <tr key={idx}>
-                    <td className="px-6 py-4 font-medium text-gray-300">
+                    <td className="px-6 py-6 text-md font-medium text-gray-300">
                       {row.designation}
                     </td>
                     {row.data.map((count, colIdx) => (
-                      <td key={colIdx} className="px-6 py-4">
+                      <td key={colIdx} className="px-3 py-2 text-lg">
                         <CountUp end={count} duration={2} />
                       </td>
                     ))}
@@ -144,6 +144,7 @@ function Jobs() {
             <h4 className="text-2xl font-semibold text-gray-100 mb-4">
               Distinctions
             </h4>
+            
             <ul className="list-disc list-inside text-gray-400 space-y-2">
               {["Patent", "Fullbright Scholarship"].map(
                 (distinction, index) => (
@@ -151,6 +152,12 @@ function Jobs() {
                 )
               )}
             </ul>
+
+            <a href="https://pucit.edu.pk/publications-of-fcit-faculty/" 
+           class="fixed bottom-4 right-4 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+           
+            <span>Publications & Patents</span>
+        </a>
           </div>
         </div>
 

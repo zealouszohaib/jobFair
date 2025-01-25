@@ -27,7 +27,9 @@ function NavBar() {
               className="h-8"
               alt="Logo"
             /> */}
-            <span className="text-2xl font-semibold">FCIT</span>
+            <span className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+              FCIT
+            </span>
           </Link>
 
           {/* Mobile Menu Button */}
@@ -78,7 +80,7 @@ function NavBar() {
                 isActive("/Student") ? "text-blue-500 font-bold" : ""
               }`}
             >
-              Student
+              Students
             </Link>
             <Link
               to="/companies"

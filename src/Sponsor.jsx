@@ -125,7 +125,7 @@ const SponsorshipPackages = () => {
         "Event name after Company Name.",
         "Extensive publicity on FCIT + PU website, social media, electronic/print media.",
       ],
-      discount: "Alumni Discount 33% on All Packages",
+      discount: "Sold out",
       badge: "Platinum",
     },
     {
