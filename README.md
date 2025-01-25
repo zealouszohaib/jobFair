@@ -1,18 +1,24 @@
-# My Vite App
+# Job Fair Preparation Project
 
-This project was bootstrapped with [Vite](https://vitejs.dev/).
+**Live Demo:** [View Demo](https://job-fair-pi.vercel.app/)
 
-## Available Scripts
+This project is a web application designed to help students and job seekers prepare for job fairs effectively. Built with [Vite](https://vitejs.dev/), it provides a modern and efficient development experience.
 
-In the project directory, you can run:
+---
 
-### `npm install`
+## Getting Started
 
-Installs the necessary dependencies.
+To get a local copy up and running, follow these steps.
 
-### `npm run dev`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ensure you have the following installed on your machine:
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zealouszohaib/job-fair-project.git
