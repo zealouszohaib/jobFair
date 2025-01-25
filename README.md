@@ -1,4 +1,6 @@
-# Job Fair Preparation Project
+# Job Fair Project
+
+Check out the live demo [here](https://job-fair-pi.vercel.app/).
 
 **Live Demo:** [View Demo](https://job-fair-pi.vercel.app/)
 
@@ -12,13 +14,9 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-Ensure you have the following installed on your machine:
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+### `npm run build`
 
-### Installation
+Builds the app for production to the `dist` folder.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/zealouszohaib/job-fair-project.git
