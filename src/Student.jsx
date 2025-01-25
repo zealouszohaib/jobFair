@@ -2,15 +2,15 @@ import React from "react";
 
 const Student = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100 flex items-center justify-center p-6">
-      <div className="max-w-2xl bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
-        <h1 className="text-3xl font-bold text-center text-indigo-400">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100 flex items-center justify-center p-4 sm:p-6">
+      <div className="w-full max-w-md sm:max-w-2xl bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 space-y-4 sm:space-y-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center text-indigo-400">
           Job Fair Preparation Tips
         </h1>
-        <p className="text-gray-300 text-center">
+        <p className="text-sm sm:text-base text-gray-300 text-center">
           Maximize your opportunities at the job fair with these essential tips!
         </p>
-        <ul className="list-disc list-inside space-y-3 text-gray-300">
+        <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-300">
           <li>
             <span className="font-semibold text-indigo-300">Update your resume:</span> Bring multiple copies.
           </li>
@@ -34,11 +34,13 @@ const Student = () => {
           </li>
         </ul>
 
-        <a  href="#" className="py-6 text-blue-100">register here</a>
+        <a href="#" className="text-sm sm:text-base text-blue-100 hover:underline">
+          Register here
+        </a>
         <div className="text-center">
           <a
             href="/path-to-dummy-guide.pdf" // Replace with the actual path to the guide
-            className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300"
+            className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-md transition-all duration-300"
             download="Job_Fair_Guide.pdf"
           >
             <span className="font-bold">Download the Job Fair Guide (PDF)</span>
