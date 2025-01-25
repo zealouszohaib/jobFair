@@ -21,4 +21,4 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/job-fair-project.git
+   git clone https://github.com/zealouszohaib/job-fair-project.git
