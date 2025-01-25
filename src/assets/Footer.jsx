@@ -46,11 +46,17 @@ const Footer = () => {
             <div className="flex flex-col items-center">
               <p className="text-xl font-bold">Scan Here</p>
               <div className="mt-4">
-                <img
-                  src={qr}
-                  alt="QR Code for 14th FCIT Career Fair 2025"
-                  className="w-40 h-40"
-                />
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfUZLkMvf8eOyk7MjMT_-jXr5K9bEewL97YEWSMMejjybJDKQ/viewform"
+                  target="_blank" // Opens the link in a new tab
+                  rel="noopener noreferrer" // Recommended for security with target="_blank"
+                >
+                  <img
+                    src={qr}
+                    alt="QR Code for 14th FCIT Career Fair 2025"
+                    className="w-40 h-40"
+                  />
+                </a>
               </div>
               <p className="mt-2 text-gray-300">14th FCIT Career Fair 2025</p>
             </div>
