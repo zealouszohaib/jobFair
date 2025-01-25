@@ -57,11 +57,16 @@ const Details = () => {
                 <Phone className="h-6 w-6 text-indigo-400" />
                 <div className="text-gray-100">
                   <p className="font-semibold">Mr. Faheem</p>
-                  <p className="text-lg text-indigo-300">0301-4786754</p>
+                  <a
+                    href="tel:03014786754"
+                    className="text-lg text-indigo-300 hover:underline"
+                  >
+                    0301-4786754
+                  </a>
                 </div>
               </div>
             </div>
-
+            
             <div className="rounded-lg border border-gray-700 bg-gray-800/40 backdrop-blur p-4">
               <div className="flex items-center gap-3">
                 <Mail className="h-6 w-6 text-indigo-400" />

@@ -141,10 +141,12 @@ function Jobs() {
             </ul>
           </div>
           <div>
-            <h4 className="text-2xl font-semibold text-gray-100 mb-4">
-              Distinctions
-            </h4>
-            
+            <a href="https://pucit.edu.pk/publications-of-fcit-faculty/">
+              <h4 className="text-2xl font-semibold text-gray-100 mb-4">
+                Distinctions
+              </h4>
+            </a>
+
             <ul className="list-disc list-inside text-gray-400 space-y-2">
               {["Patent", "Fullbright Scholarship"].map(
                 (distinction, index) => (
@@ -153,11 +155,7 @@ function Jobs() {
               )}
             </ul>
 
-            <a href="https://pucit.edu.pk/publications-of-fcit-faculty/" 
-           class="fixed bottom-4 right-4 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
-           
-            <span>Publications & Patents</span>
-        </a>
+            
           </div>
         </div>
 

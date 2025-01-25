@@ -42,14 +42,13 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* QR Code Section */}
             <div className="flex flex-col items-center">
               <p className="text-xl font-bold">Scan Here</p>
               <div className="mt-4">
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfUZLkMvf8eOyk7MjMT_-jXr5K9bEewL97YEWSMMejjybJDKQ/viewform"
-                  target="_blank" // Opens the link in a new tab
-                  rel="noopener noreferrer" // Recommended for security with target="_blank"
+                  target="_blank" 
+                  rel="noopener noreferrer" 
                 >
                   <img
                     src={qr}
