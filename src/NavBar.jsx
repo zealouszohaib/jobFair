@@ -127,7 +127,7 @@ function NavBar() {
                     : "text-gray-400 hover:text-white hover:bg-gray-700"
                 }`}
               >
-                Student
+                Students
               </Link>
             </li>
             <li>
@@ -139,7 +139,7 @@ function NavBar() {
                     : "text-gray-400 hover:text-white hover:bg-gray-700"
                 }`}
               >
-                Company
+                Companies
               </Link>
             </li>
             <li>
@@ -151,7 +151,7 @@ function NavBar() {
                     : "text-gray-400 hover:text-white hover:bg-gray-700"
                 }`}
               >
-                Sponsor
+                Sponsors
               </Link>
             </li>
           </ul>
