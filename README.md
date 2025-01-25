@@ -13,7 +13,6 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
-
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
 - [npm](https://www.npmjs.com/) (usually comes with Node.js)
 
