@@ -169,7 +169,7 @@ const SponsorshipPackages = () => {
         "One room for recruitment activities.",
         "One 01-hour workshop in March 2025.",
       ],
-      discount: "Early Bird Discount: 5% if paid by 31st January 2025",
+      discount: "25% Off if Paid by 31st Jan 2025",
       badge: "Bronze",
     },
   ];
