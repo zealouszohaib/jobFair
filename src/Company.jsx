@@ -90,14 +90,14 @@ const CompanyPackages = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex p-8">
+    <div className="bg-gray-900 text-white min-h-screen flex p-8 ">
       <div className="container mx-auto flex gap-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 w-3/4">
           {packages.map((pkg, index) => (
             <CompanyCard key={index} {...pkg} />
           ))}
         </div>
-        <motion.div className="w-1/4 bg-gray-800 p-6 rounded-xl overflow-y-auto h-[450px] shadow-lg" animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+        <motion.div className="hidden lg:block w-1/4 bg-gray-800 p-6 rounded-xl  overflow-y-auto h-[450px]   shadow-lg " animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
           <h2 className="text-xl font-bold mb-4 text-center border-b pb-2">Registered Companies</h2>
           <ul className="space-y-2">
             {companies.map((company, index) => (
