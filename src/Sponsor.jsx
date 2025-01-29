@@ -49,8 +49,8 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
     >
       {/* SOLD OUT Overlay */}
       {isSoldOut && (
-        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md flex items-center justify-center">
-          <span className="text-white text-4xl font-bold uppercase tracking-wider animate-pulse">
+        <div className="absolute inset-0  bg-opacity-50 backdrop-blur-md flex items-center justify-center">
+          <span className="text-red-500 text-4xl font-bold uppercase tracking-wider animate-pulse">
             SOLD OUT
           </span>
         </div>
@@ -114,6 +114,8 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
     </div>
   );
 };
+
+
 const SponsorshipPackages = () => {
   const packages = [
     {

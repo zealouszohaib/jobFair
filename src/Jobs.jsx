@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 function Jobs() {
   return (
-    <div className="min-h-screen bg-gray-900  py-12 px-6 text-white">
+    <div className="min-h-screen bg-gray-900  py-12 px-6 text-white md:mt-[-200px] ">
 
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Title Section */}
@@ -22,7 +22,7 @@ function Jobs() {
           <h3 className="text-4xl font-semibold text-orange-400 text-center">
             Department Information
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:mx-[230px]">
             {[
               {
                 label: "BSCS Students",
@@ -124,7 +124,7 @@ function Jobs() {
         </div>
 
         {/* Research and Distinctions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-[200px] ">
           <div>
             <h4 className="text-2xl font-semibold text-gray-100 mb-4">
               Areas of Research
