@@ -37,37 +37,42 @@ const AnimatedBadgeStyles = () => (
 
 const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const isSoldOut = discount === "Sold out"; // Check if it's sold out
 
   return (
     <div
-      className={`max-w-xs mx-auto bg-white rounded-xl overflow-hidden transform transition-all duration-500 ${
-        isHovered ? "scale-105 shadow-2xl bg-gradient-to-r from-indigo-600 to-purple-700" : "shadow-lg"
-      } hover:shadow-2xl hover:bg-gradient-to-r from-indigo-600 to-purple-700`}
-      onMouseEnter={() => setIsHovered(true)}
+      className={`relative max-w-xs mx-auto rounded-xl overflow-hidden transition-all duration-500 shadow-lg ${
+        isHovered && !isSoldOut ? "scale-105 shadow-2xl bg-gradient-to-r from-indigo-600 to-purple-700" : ""
+      } ${isSoldOut ? "grayscale opacity-75 blur-[2px] pointer-events-none" : ""}`}
+      onMouseEnter={() => !isSoldOut && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* SOLD OUT Overlay */}
+      {isSoldOut && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md flex items-center justify-center">
+          <span className="text-white text-4xl font-bold uppercase tracking-wider animate-pulse">
+            SOLD OUT
+          </span>
+        </div>
+      )}
+
       {/* Gradient Border Effect */}
       <div className="p-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full flex flex-col">
         <div className="bg-white h-full flex flex-col justify-between rounded-lg">
           {/* Card Header */}
           <div className="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 p-4 text-white relative overflow-hidden">
-            {/* Title Section */}
-            <div className="relative">
-              <h2 className="text-2xl sm:text-3xl font-extrabold mb-1 mt-8 text-shadow-lg">
-                {title}
-              </h2>
-              <div className="flex items-baseline gap-1">
-                <p className="text-lg sm:text-xl font-bold">{price}</p>
-              </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-1 mt-8 text-shadow-lg">
+              {title}
+            </h2>
+            <div className="flex items-baseline gap-1">
+              <p className="text-lg sm:text-xl font-bold">{price}</p>
             </div>
 
             {/* Badges */}
             {badge && (
               <div className="absolute top-2 right-2">
                 <span className="relative inline-flex">
-                  {/* Animated pulsating background */}
                   <span className="absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-red-500 opacity-75 animate-pulse"></span>
-                  {/* Main badge with pulse animation */}
                   <span className="relative bg-gradient-to-r from-red-600 via-pink-500 to-red-300 text-white text-sm px-4 py-1 rounded-full font-semibold shadow-lg transform hover:scale-110 transition-all duration-200 ease-in-out animate-pulse">
                     {badge}
                   </span>
@@ -75,7 +80,8 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
               </div>
             )}
 
-            {discount && (
+            {/* Green Discount Tag (Only if NOT Sold Out) */}
+            {discount && discount !== "Sold out" && (
               <div className="absolute top-2 left-1 transform -rotate-12">
                 <span
                   className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white text-xs sm:text-sm px-3 py-1 rounded-full font-semibold shadow-lg 
@@ -108,7 +114,6 @@ const SponsorshipCard = ({ title, price, benefits, discount, badge }) => {
     </div>
   );
 };
-
 const SponsorshipPackages = () => {
   const packages = [
     {

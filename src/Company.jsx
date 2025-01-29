@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RegisteredCompanies from "./Registered";
 
 const CompanyCard = ({ title, price, benefits, discount, badge, bgColor = "from-indigo-500 via-indigo-600 to-indigo-800" }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -36,31 +37,24 @@ const CompanyCard = ({ title, price, benefits, discount, badge, bgColor = "from-
 
           {/* Badge */}
           {badge && (
-          <div className="absolute top-4 right-4">
-          <span className="relative inline-flex">
-            {/* Animated pulsating background */}
-            <span className="absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-red-600 via-pink-600 to-purple-500 opacity-75 animate-ping"></span>
-        
-            {/* Main badge with hover effects and soft glow */}
-            <span className="relative bg-gradient-to-r from-red-600 via-pink-500 to-red-300 text-white text-sm px-4 py-1.5 rounded-full font-semibold shadow-md transform hover:scale-105 transition-transform duration-200 ease-in-out">
-              {badge}
-            </span>
-          </span>
-        </div>
-        
+            <div className="absolute top-4 right-4">
+              <span className="relative inline-flex">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-red-600 via-pink-600 to-purple-500 opacity-75 animate-ping"></span>
+                <span className="relative bg-gradient-to-r from-red-600 via-pink-500 to-red-300 text-white text-sm px-4 py-1.5 rounded-full font-semibold shadow-md transform hover:scale-105 transition-transform duration-200 ease-in-out">
+                  {badge}
+                </span>
+              </span>
+            </div>
           )}
 
           {/* Discount Badge */}
           {discount && (
-           <div className="absolute top-4 left-1 transform -rotate-12">
-           <span
-             className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white text-sm px-3 py-1 rounded-full font-semibold shadow-lg 
-             animate-pulse hover:scale-110 hover:animate-[bounce_1s_infinite] transition-all duration-300 ease-in-out ring-2 ring-green-400"
-           >
-             {discount}
-           </span>
-         </div>
-         
+            <div className="absolute top-4 left-1 transform -rotate-12">
+              <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white text-sm px-3 py-1 rounded-full font-semibold shadow-lg 
+                animate-pulse hover:scale-110 hover:animate-[bounce_1s_infinite] transition-all duration-300 ease-in-out ring-2 ring-green-400">
+                {discount}
+              </span>
+            </div>
           )}
         </div>
 
@@ -87,6 +81,7 @@ const CompanyCard = ({ title, price, benefits, discount, badge, bgColor = "from-
     </div>
   );
 };
+
 
 
 const CompanyPackages = () => {
@@ -123,9 +118,9 @@ const CompanyPackages = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white  min-h-screen">
+    <div className="bg-gray-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+        <h1 className="text-4xl font-bold mb-8 text-center">
           Company Stall Packages
         </h1>
 
@@ -142,6 +137,8 @@ const CompanyPackages = () => {
             />
           ))}
         </div>
+        
+        <RegisteredCompanies />
       </div>
     </div>
   );
