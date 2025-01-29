@@ -22,7 +22,7 @@ function Jobs() {
           <h3 className="text-4xl font-semibold text-orange-400 text-center">
             Department Information
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:mx-[230px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:mx-[190px]">
             {[
               {
                 label: "BSCS Students",

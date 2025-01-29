@@ -186,11 +186,11 @@ const SponsorshipPackages = () => {
 
   return (
     <div className="bg-gray-900 py-12">
-      <div className="container mx-auto p-6">
+      <div className=" mx-auto p-6">
         <h1 className="text-5xl font-bold mb-12 text-center text-white">
           Sponsorship Packages
         </h1>
-        <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8">
           {packages.map((pkg, index) => (
             <SponsorshipCard
               key={index}
