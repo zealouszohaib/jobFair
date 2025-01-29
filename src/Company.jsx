@@ -49,7 +49,7 @@ const CompanyCard = ({ title, price, benefits, discount, badge, bgColor = "from-
 const CompanyPackages = () => {
   const packages = [
     {
-      title: "Premium Stall",
+      title: "Green Stall",
       price: "RS 150K",
       bgColor: "from-green-500 via-green-600 to-green-800",
       benefits: [
@@ -64,7 +64,7 @@ const CompanyPackages = () => {
       badge: "Premium"
     },
     {
-      title: "Standard Stall",
+      title: "purple Stall",
       price: "RS 75K",
       bgColor: "from-purple-500 via-purple-600 to-purple-800",
       benefits: [

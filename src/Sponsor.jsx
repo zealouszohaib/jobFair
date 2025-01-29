@@ -160,7 +160,7 @@ const SponsorshipPackages = () => {
       benefits: [
         "Promotional video provided...",
         "Location on Participation Certificates.",
-        "Entrance dimensions: 4 x 2 meter.",
+        "Entrance dimensions: 6 x 3  meter.",
         "Accommodation for up to 10 representatives from the company.",
         "Capacity of 30+ participants for recruitment activities.",
         "Publicity on FCIT + PU website, social media.",
