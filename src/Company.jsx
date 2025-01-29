@@ -5,7 +5,7 @@ const CompanyCard = ({ title, price, benefits, discount, badge, bgColor = "from-
   return (
     <motion.div
       className="relative max-w-sm w-full bg-white rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 
-        shadow-lg hover:shadow-xl md:h-[28rem] "
+        shadow-lg hover:shadow-xl md:h-[35rem] "
       whileHover={{ scale: 1.05 }}
     >
       <div className="bg-white flex flex-col">
@@ -96,7 +96,7 @@ const CompanyPackages = () => {
             <CompanyCard key={index} {...pkg} />
           ))}
         </div>
-        <motion.div className="hidden lg:block w-1/4 bg-gray-800 p-6 rounded-xl overflow-y-auto h-[450px] shadow-lg" animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+        <motion.div className="hidden lg:block w-1/4 bg-gray-800 p-6 rounded-xl overflow-y-auto h-[35rem] shadow-lg" animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
           <h2 className="text-xl font-bold mb-4 text-center border-b pb-2">Registered Companies</h2>
           <ul className="space-y-2">
             {companies.map((company, index) => (
