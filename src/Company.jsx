@@ -97,7 +97,7 @@ const CompanyPackages = () => {
           ))}
         </div>
         <motion.div className="hidden lg:block w-1/4 bg-gray-800 p-6 rounded-xl overflow-y-auto h-[35rem] shadow-lg" animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-          <h2 className="text-xl font-bold mb-4 text-center border-b pb-2">Registered Companies</h2>
+          <h2 className="text-xl font-bold mb-4 text-center border-b pb-2"> Companies</h2>
           <ul className="space-y-2">
             {companies.map((company, index) => (
               <motion.li key={index} className="p-2 bg-gray-700 rounded-lg text-center" whileHover={{ scale: 1.05 }}>
