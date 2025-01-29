@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 function Jobs() {
   return (
-    <div className="min-h-screen bg-gray-900  px-6 text-white">
+    <div className="min-h-screen bg-gray-900  py-12 px-6 text-white">
 
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Title Section */}
