@@ -45,7 +45,6 @@ const CompanyCard = ({ title, price, benefits, discount, badge, bgColor = "from-
     </motion.div>
   );
 };
-
 const CompanyPackages = () => {
   const packages = [
     {
@@ -64,7 +63,7 @@ const CompanyPackages = () => {
       badge: "Premium"
     },
     {
-      title: "purple Stall",
+      title: "Purple Stall",
       price: "RS 75K",
       bgColor: "from-purple-500 via-purple-600 to-purple-800",
       benefits: [
@@ -90,14 +89,14 @@ const CompanyPackages = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex p-8 ">
-      <div className="container mx-auto flex gap-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 w-3/4">
+    <div className="bg-gray-900 text-white min-h-screen flex p-8">
+      <div className="container mx-auto flex gap-8 flex-wrap justify-center"> {/* Added justify-center and flex-wrap */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 w-full sm:w-3/4 lg:w-1/2"> {/* Adjusted width */}
           {packages.map((pkg, index) => (
             <CompanyCard key={index} {...pkg} />
           ))}
         </div>
-        <motion.div className="hidden lg:block w-1/4 bg-gray-800 p-6 rounded-xl  overflow-y-auto h-[450px]   shadow-lg " animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+        <motion.div className="hidden lg:block w-1/4 bg-gray-800 p-6 rounded-xl overflow-y-auto h-[450px] shadow-lg" animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
           <h2 className="text-xl font-bold mb-4 text-center border-b pb-2">Registered Companies</h2>
           <ul className="space-y-2">
             {companies.map((company, index) => (
@@ -111,5 +110,6 @@ const CompanyPackages = () => {
     </div>
   );
 };
+
 
 export default CompanyPackages;
