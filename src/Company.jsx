@@ -59,7 +59,7 @@ const CompanyPackages = () => {
         "Priority placement in listings",
         "Extended setup and teardown time"
       ],
-      discount: "Early Bird 25% Off",
+      discount: "Early Bird 15% Off",
       badge: "Premium"
     },
     {
