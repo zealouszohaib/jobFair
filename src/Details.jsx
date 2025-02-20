@@ -9,7 +9,7 @@ const Details = () => {
           <div className="inline-block">
             <div className="flex items-center gap-2 bg-indigo-900/50 text-indigo-300 px-4 py-2 rounded-full border border-indigo-700/50 backdrop-blur-sm">
               <Calendar size={20} />
-              <span className="font-semibold">February 20, 2025</span>
+              <span className="font-semibold">February 21, 2025</span>
             </div>
           </div>
 

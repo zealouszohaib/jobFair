@@ -17,7 +17,6 @@ const ImageSlider = ({ images }) => {
 
   return (
     <div className="relative max-w-4xl mx-auto overflow-hidden">
-      {/* Slider Container */}
       <div
         className="flex transition-transform duration-500"
         style={{
